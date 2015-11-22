@@ -1,0 +1,114 @@
+
+body {
+	margin: 0;
+	background-color: #3498db;
+	font-size: 13px;
+}
+
+section#hand {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+div.card {
+	width: 8em;
+	height: 11.5em;
+	padding: 0.5em 0.348em;
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0 0 10px #2980b9;
+	cursor: pointer;
+}
+
+div.card div {
+	height: 3.833em;
+}
+
+div.card div:nth-child(2) {
+	text-align: center;
+}
+
+div.card div span {
+	display: inline-block;
+	width: 4em;
+	height: 100%;
+	-webkit-mask-position: center;
+	-webkit-mask-repeat: no-repeat;
+}
+
+div.card.brown div span {
+	background-color: #663300;
+}
+
+div.card.blue div span {
+	background-color: #2980b9;
+}
+
+div.card.green div span {
+	background-color: #27ae60;
+}
+
+div.card.grey div span {
+	background-color: #777;
+}
+
+div.card.red div span {
+	background-color: #c0392b;
+}
+
+div.card.yellow div span {
+	background-color: #f1c40f;
+}
+
+div.card.circle div span {
+	-webkit-mask-image: url('images/circle.svg');
+	-webkit-mask-size: 50%;
+}
+
+div.card.cross div span {
+	-webkit-mask-image: url('images/cross.svg');
+	-webkit-mask-size: 65%;
+}
+
+div.card.heart div span {
+	-webkit-mask-image: url('images/heart.svg');
+	-webkit-mask-size: 50%;
+}
+
+div.card.square div span {
+	-webkit-mask-image: url('images/square.svg');
+	-webkit-mask-size: 40%;
+}
+
+div.card.star div span {
+	-webkit-mask-image: url('images/star.svg');
+	-webkit-mask-size: 60%;
+}
+
+div.card.triangle div span {
+	-webkit-mask-image: url('images/triangle.svg');
+	-webkit-mask-size: 45%;
+}
+
+div.card.one div:first-child {
+	visibility: hidden;
+}
+
+div.card.two div:first-child span:last-child, div.card.three div:first-child span:last-child {
+	visibility: hidden;
+}
+
+div.card.two div:nth-child(2), div.card.four div:nth-child(2) {
+	visibility: hidden;
+}
+
+div.card.one div:last-child {
+	visibility: hidden;
+}
+
+div.card.two div:last-child span:first-child, div.card.three div:last-child span:first-child {
+	visibility: hidden;
+}
