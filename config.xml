@@ -1,16 +1,31 @@
-<?xml version='1.0' encoding='UTF-8' ?>
-	<widget xmlns='http://www.w3.org/ns/widgets'
-		xmlns:gap='http://phonegap.com/ns/1.0'
-		id='com.andrew.blink'
-		versionCode='10'
-		version='1.0.0'>
-		<gap:platform name='ios' />
-		<name>Blink</name>
-		<description>Blink app for iPad</description>
-		<author href='andrewthomas.us' email='andrew.developer87@gmail.com'>Andrew Thomas</author>
-		<preference name='DisallowOverscroll' value='true' />
-		<preference name='UIWebViewBounce' value='false' />
-		<preference name='webviewbounce' value='false' />
-		<preference name='orientation' value='landscape' />
-		<preference name='fullscreen' value='true' />
-	</widget>
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="BlinkApp" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+	<name>Blink</name>
+	<description>
+		Blink app for iPad
+	</description>
+	<author email="andrew.developer87@gmail.com" href="http://andrewthomas.us">
+		Andrew Thomas
+	</author>
+	<content src="index.html" />
+	<preference name="permissions" value="none" />
+	<preference name="orientation" value="landscape" />
+	<preference name="Fullscreen" value="true" />
+	<preference name='DisallowOverscroll' value='true' />
+	<preference name='UIWebViewBounce' value='false' />
+	<preference name='webviewbounce' value='false' />
+	<preference name="detect-data-types" value="true" />
+	<preference name="exit-on-suspend" value="false" />
+	<preference name="show-splash-screen-spinner" value="true" />
+	<preference name="auto-hide-splash-screen" value="true" />
+	<icon src="icon.png" />
+	<icon gap:platform="ios" height="57" src="www/res/icon/ios/icon-57.png" width="57" />
+	<icon gap:platform="ios" height="72" src="www/res/icon/ios/icon-72.png" width="72" />
+	<icon gap:platform="ios" height="114" src="www/res/icon/ios/icon-57-2x.png" width="114" />
+	<icon gap:platform="ios" height="144" src="www/res/icon/ios/icon-72-2x.png" width="144" />
+	<gap:splash gap:platform="ios" height="480" src="www/res/screen/ios/screen-iphone-portrait.png" width="320" />
+	<gap:splash gap:platform="ios" height="960" src="www/res/screen/ios/screen-iphone-portrait-2x.png" width="640" />
+	<gap:splash gap:platform="ios" height="1136" src="www/res/screen/ios/screen-iphone-portrait-568h-2x.png" width="640" />
+	<gap:splash gap:platform="ios" height="1024" src="www/res/screen/ios/screen-ipad-portrait.png" width="768" />
+	<gap:splash gap:platform="ios" height="768" src="www/res/screen/ios/screen-ipad-landscape.png" width="1024" />
+</widget>
