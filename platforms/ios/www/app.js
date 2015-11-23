@@ -1,5 +1,5 @@
 
-var difficulty
+var difficulty, finished
 
 /*======================================================================
 =============== CARD ===================================================
@@ -385,7 +385,9 @@ var player = (function() {
 			computer.end(false)
 		}
 
-		done.show(won)
+		if (!finished) {
+			done.show(won)
+		}
 	}
 
 	return {
@@ -489,6 +491,8 @@ var done = (function() {
 	}
 
 	var show = function(playerWon) {
+		finished = true
+
 		message.innerHTML = 'You ' + (playerWon ? '<span class="won">won!</span>' : '<span class="lost">lost</span>')
 
 		overlay.style.display = 'block'
@@ -587,6 +591,8 @@ window.addEventListener('load', function() {
 	played.initialize()
 	done.initialize()
 	menu.initialize()
+
+	finished = false
 
 	setTimeout(function() {
 		menu.open()
