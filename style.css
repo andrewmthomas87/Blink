@@ -1,16 +1,147 @@
 
+@font-face {
+	font-family: 'Lato';
+	src: url('Lato-Light.ttf');
+	font-weight: 300;
+}
+
+* {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: transparent;
+}
+
+html {
+	font-family: 'Lato', sans-serif;
+	font-size: 14px;
+}
+
 body {
 	margin: 0;
 	background-color: #3498db;
-	font-size: 13px;
 }
 
-section#hand {
-	display: inline-block;
+section {
+	position: absolute;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+
+div#overlay {
+	display: none;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	-webkit-transition: opacity 0.25s ease;
+	        transition: opacity 0.25s ease;
+}
+
+div#overlay.hidden {
+	opacity: 0;
+}
+
+div#overlay div {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	background-color: #3498db;
+	border-radius: 10px;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+	-webkit-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
+	-webkit-transition: opacity 0.25s ease, -webkit-transition 0.25s ease;
+	        transition: opacity 0.25s ease, transition 0.25s ease;
+}
+
+div#overlay div.hidden {
+	opacity: 0;
+	-webkit-transform: translate(-50%, calc(-50% + 1em));
+	        transform: translate(-50%, calc(-50% + 1em));
+}
+
+div#overlay div h1 {
+	color: #222;
+	padding: 1em;
+	margin: 0;
+	background-color: #fff;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	font-size: 4em;
+	font-weight: 300;
+}
+
+div#overlay div h1 span.won {
+	color: #27ae60;
+}
+
+div#overlay div h1 span.lost {
+	color: #c0392b;
+}
+
+div#overlay div a {
+	display: block;
+	color: #fff;
+	padding: 0.75em;
+	font-size: 2em;
+	font-weight: 300;
+	text-align: center;
+	text-decoration: none;
+}
+
+section#computer {
+	top: 0;
+}
+
+section#played {
+	top: 50%;
+	-webkit-transform: translate(0, -50%);
+	        transform: translate(0, -50%);
+}
+
+section#player {
+	bottom: 0;
+}
+
+section>div {
+	display: inline-block;
+	width: 8.696em;
+	padding: 1em;
+	vertical-align: top;
+}
+
+section div {
+	-webkit-transition: opacity 0.25s ease, -webkit-transform 0.25s ease;
+	        transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+section div.hidden {
+	opacity: 0;
+	-webkit-transform: translate(0, 1em);
+	        transform: translate(0, 1em);
+}
+
+section div.stack {
+	color: #fff;
+	width: 3.2em;
+	padding: 2em 0.1392em;
+	margin: 0.4em;
+	background-color: #1e6897;
+	border-radius: 5px;
+	font-size: 2.5em;
+	line-height: 1em;
+	box-shadow: 0 0 10px #2980b9;
+	cursor: pointer;
+}
+
+section#played>div:first-child {
+	margin-right: 2em;
+}
+
+section#played>div:last-child {
+	margin-left: 2em;
 }
 
 div.card {
@@ -21,6 +152,16 @@ div.card {
 	border-radius: 5px;
 	box-shadow: 0 0 10px #2980b9;
 	cursor: pointer;
+}
+
+section#computer div.selected div.card {
+	-webkit-transform: scale3d(1.1, 1.1, 1.1) translate(0, 5%);
+	        transform: scale3d(1.1, 1.1, 1.1) translate(0, 5%);
+}
+
+section#player div.selected div.card {
+	-webkit-transform: scale3d(1.1, 1.1, 1.1) translate(0, -5%);
+	        transform: scale3d(1.1, 1.1, 1.1) translate(0, -5%);
 }
 
 div.card div {
